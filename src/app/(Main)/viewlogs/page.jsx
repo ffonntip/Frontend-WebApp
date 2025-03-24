@@ -19,7 +19,7 @@ const poppin4 = Poppins({ subsets: ["latin"], weight: "400" });
 const poppin3 = Poppins({ subsets: ["latin"], weight: "300" });
 const poppin1 = Poppins({ subsets: ["latin"], weight: "100" });
 const kalam = Kalam({ subsets: ["latin"], weight: "400" });
-export default function MainPage() {
+export default function logPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [droneConfig, setDroneConfig] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -93,42 +93,34 @@ export default function MainPage() {
         {/* Top Bar */}
 
         <div className="w-full flex flex-wrap items-center space-x-2 md:text-nowrap bg-white shadow-md p-4 rounded-tl-3xl font-semibold text-gray-900 text-sm md:text-lg">
-          <Link href="/#" className={`inline-block bg-stone-100 px-3.5 rounded-full transition-all duration-200 md:${poppin1.className} ${poppin4.className}`}>
+          <Link href="/#" className={`hover:text-gray-500 transition-all md:${poppin1.className} duration-200 ${poppin4.className}`}>
             <span>Main</span>
           </Link>
           <ChevronRight className="w-3 h-3  text-gray-500" />
-          <Link href="/viewconfig" className={`hover:text-gray-500 transition-all md:${poppin1.className}  duration-200 ${poppin4.className}`}>View Config</Link>
+          <Link href="/viewconfig" className={`hover:text-gray-500 transition-all md:${poppin1.className} duration-200 ${poppin4.className}`}>View Config</Link>
           <ChevronRight className="w-3 h-3  text-gray-500" />
           <Link href="/temp" className={`hover:text-gray-500 transition-all md:${poppin1.className} duration-200 ${poppin4.className}`}>Temp Logs Record</Link>
           <ChevronRight className="w-3 h-3  text-gray-500" />
-          <Link href="/viewlogs" className={`hover:text-gray-500 transition-all md:${poppin1.className} duration-200 ${poppin4.className}`}>View Logs</Link>
+          <Link href="/viewlogs" className={`inline-block bg-stone-100 px-3.5 rounded-full transition-all duration-200 md:${poppin1.className} ${poppin4.className}`}>View Logs</Link>
         </div>
 
         <Separator />
 
         {/* Content Section */}
-        <div className="container mx-auto  bg-white">
-          <div className="grid justify-center grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="container mx-auto items-center justify-center p-14  bg-white h-screen">
+          
             {/* ซ้ายบน */}
-            <div className={`w-9/12 rounded-xs mx-auto  `}>
-              <Configs />
-            </div>
-
-            {/* ขวาบน */}
-            <div className="w-10/12 rounded-xl ">
-              <TempLog />
-            </div>
-
-            {/* ตรงกลางล่าง (Logs ขยายเต็ม 2 คอลัมน์) */}
-            <div className="w-full md:col-span-2 p-2 ">
+            
               <Logs />
-            </div>
+           
+
+         
           </div>
         </div>
 
 
       </div>
-    </div>
+  
 
 
   );
