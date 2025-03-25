@@ -43,9 +43,12 @@ export default function MainPage() {
     <div className="flex h-screen">
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 transform bg-slate-100 border-r text-black w-64 p-5  transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
-          } md:relative p-2 md:translate-x-0`}
+        className={`md:h-screen inset-y-0 left-0 z-50 h-full w-64 bg-slate-100 border-r text-black p-5 
+              transition-transform duration-300 ease-in-out md:relative md:translate-x-0 
+              sticky top-0 overflow-y-auto portrait:overflow-y-auto landscape:overflow-hidden`}
       >
+
+
         <button className="absolute top-3 right-1 md:hidden" onClick={() => setIsOpen(false)}>
           <X className="h-6 w-6" />
         </button>
@@ -107,7 +110,7 @@ export default function MainPage() {
         <Separator />
 
         {/* Content Section */}
-        <div className="mx-auto  bg-white">
+        <div className="container min-h-screen max-w-screen bg-white">
           <div className="grid justify-center grid-cols-1 md:grid-cols-2 gap-4">
             {/* ซ้ายบน */}
             <div className={`w-9/12 rounded-xs mx-auto  `}>
@@ -120,7 +123,7 @@ export default function MainPage() {
             </div>
 
             {/* ตรงกลางล่าง (Logs ขยายเต็ม 2 คอลัมน์) */}
-            <div className="w-full md:col-span-2 p-2 ">
+            <div className="w-full md:col-span-2 p-7 ">
               <Logs />
             </div>
           </div>
