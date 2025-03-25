@@ -107,7 +107,7 @@ export default function TempPage() {
         <Separator />
 
         {/* Content Section */}
-        <div className="container mx-auto items-center justify-center  bg-white h-screen">
+        <div className="container min-h-screen max-w-screen bg-white">
           
             {/* ซ้ายบน */}
             
