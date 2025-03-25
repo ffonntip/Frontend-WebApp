@@ -107,7 +107,7 @@ export default function MainPage() {
         <Separator />
 
         {/* Content Section */}
-        <div className="container mx-auto  bg-white">
+        <div className="mx-auto  bg-white">
           <div className="grid justify-center grid-cols-1 md:grid-cols-2 gap-4">
             {/* ซ้ายบน */}
             <div className={`w-9/12 rounded-xs mx-auto  `}>
