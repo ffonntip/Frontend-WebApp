@@ -107,7 +107,7 @@ export default function logPage() {
         <Separator />
 
         {/* Content Section */}
-        <div className="container min-h-screen max-w-screen bg-white">
+        <div className="container min-h-screen max-w-screen p-5 bg-white">
           
             {/* ซ้ายบน */}
             
